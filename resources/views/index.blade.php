@@ -11,7 +11,12 @@
           </ul>
       </div><br />
       @endif
-      <form method="post" action="{{url('captcha')}}">
+      @if (session('status'))
+                        <div class="alert alert-success">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+      <form method="post" action="{{route('mainpage')}}">
         @csrf
         <div class="row">
           <div class="col-md-4"></div>

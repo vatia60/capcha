@@ -1,0 +1,17 @@
+https://appdividend.com/2018/04/05/how-to-generate-captcha-code-in-laravel/
+
+composer require mews/captcha
+
+Find the providers in config >> app.php file and register the Captcha Service Provider.
+
+'providers' => [
+        // ...
+        Mews\Captcha\CaptchaServiceProvider::class,
+    ]
+
+Locate the aliases in config >> app.php file and register the aliases.
+
+'aliases' => [
+        // ...
+        'Captcha' => Mews\Captcha\Facades\Captcha::class,
+    ]
