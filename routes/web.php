@@ -12,3 +12,6 @@
 */
 
 Route::get('/', 'indexController@index')->name('index');
+Route::get('/createcaptcha', 'CaptchaController@create');
+Route::post('/captcha', 'CaptchaController@captchaValidate');
+Route::get('/refreshcaptcha', 'CaptchaController@refreshCaptcha');
